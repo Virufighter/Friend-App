@@ -8,6 +8,8 @@ import { ViewFriendComponent } from './view-friend/view-friend.component';
 import { SerachFriendComponent } from './serach-friend/serach-friend.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
 const myrout:Routes=[
   {
     path:"",
@@ -33,7 +35,9 @@ const myrout:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myrout)
+    RouterModule.forRoot(myrout),
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
